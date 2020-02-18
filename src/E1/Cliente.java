@@ -26,11 +26,13 @@ public class Cliente {
                     System.out.println("El resultado es: " + objetoRemoto.AreaCirculo(radio));
                     break;
                 case 2:
-                    System.out.println("Ingrese el perimetro del poligono: ");
+                    System.out.println("Ingresa el numero de lados: ");
+                    int numeroL = teclado.nextInt();
+                    System.out.println("Ingrese la longitud de los lados: ");
                     double perimetro = teclado.nextDouble();
                     System.out.println("Ingrese el apotema: ");
                     double apotema = teclado.nextDouble();
-                    System.out.println("El resultado es: " + objetoRemoto.AreaPoligono(perimetro, apotema));
+                    System.out.println("El resultado es: " + objetoRemoto.AreaPoligono(numeroL, perimetro, apotema));
                     break;
                 case 3:
                     System.out.println("Ingrese 'a': ");
