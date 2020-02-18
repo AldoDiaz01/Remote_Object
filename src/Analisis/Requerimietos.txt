@@ -1,0 +1,14 @@
+if(GUi)
+{
+validar entradas
+Manejo de excepciones 
+Tipos Datos Int, Double
+Interaccion usuario-programa
+}
+else(consola)
+{
+validar entradas
+Manejo de excepciones 
+Tipos Datos Int, Double
+Interaccion usuario-programa
+}

@@ -1,0 +1,13 @@
+Area Poligono
+	A = (Perimetro*Apotema) / 2
+
+	A = (((Numero_Lados)* Longitud_Lado) * Apotema)/2
+
+
+https://isccms.wordpress.com/2010/10/29/programa-que-calcula-el-perimetro-de-un-poligono-regular-scanner/
+
+Area Circulo
+	A = Pi * Radio^2
+
+Ecuación lineal
+	x = (-b +- (Raiz(b^2 -4aC)))/2a
