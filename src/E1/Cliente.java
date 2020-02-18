@@ -13,14 +13,17 @@ public class Cliente {
             
             Scanner teclado = new Scanner(System.in);
             System.out.println("Menu de opciones:");
-            System.out.println("1.Area de un triangulo");
+            System.out.println("1.Area de un circulo");
             System.out.println("2.Area de un poligono regular");
             System.out.println("3.Area de un poligono irregular");
-            System.out.println("Escoge una: ");
+            System.out.print("Seleccione una: ");
             int opcion;
             opcion = teclado.nextInt();
             switch(opcion){
                 case 1:
+                    System.out.println("Ingrese el radio del circulo: ");
+                    double radio = teclado.nextDouble();
+                    System.out.println("El resultado es: " + objetoRemoto.AreaCirculo(radio));
                     break;
                 case 2:
                     break;
@@ -29,11 +32,6 @@ public class Cliente {
                 default:
                     break;
             }
-            System.out.println("Capital: $20,000");
-            System.out.println("Interes: 6%");
-            System.out.println("Plazo: 5 años");
-            DecimalFormat df = new DecimalFormat("#.##");
-            
         } catch (Exception e){
             e.printStackTrace();
         }
