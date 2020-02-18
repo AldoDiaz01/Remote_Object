@@ -16,7 +16,7 @@ public class Servidor {
             
             InterfaceRemota ir = new ObjetoRemoto();
             
-            Naming.rebind("//10.50.2.15/ObjectoRemoto", ir);
+            Naming.rebind("//192.168.43.98/ObjetoRemoto", ir);
             System.out.println("Servicio iniciado...");
         }
         catch(Exception e){

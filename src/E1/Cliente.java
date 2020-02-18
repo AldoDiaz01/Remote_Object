@@ -2,10 +2,10 @@ package E1;
 import java.rmi.*;
 import java.text.*;
 
-public class Cliente {
+public class Cliente     {
     public Cliente(){
         try{
-            InterfaceRemota ir = (InterfaceRemota)Naming.lookup("//10.50.2.15/ObjectoRemoto");
+            InterfaceRemota ir = (InterfaceRemota)Naming.lookup("//192.168.43.225/ObjetoRemoto");
             System.out.println("Capital: $20,000");
             System.out.println("Interes: 6%");
             System.out.println("Plazo: 5 años");
