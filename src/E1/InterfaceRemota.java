@@ -8,7 +8,7 @@ public interface InterfaceRemota extends Remote {
 
     public double AreaPoligono(double perimeter, double apothem) throws RemoteException;
 
-    public double AreaCirculo() throws RemoteException;
+    public double AreaCirculo(double radio) throws RemoteException;
 
-    public double EcuacionLineal() throws RemoteException;
+    public double EcuacionLineal(double a, double b, double c) throws RemoteException;
 } 
