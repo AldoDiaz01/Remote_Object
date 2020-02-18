@@ -12,11 +12,12 @@ public class Servidor {
     public Servidor() {
         try {
             //Se indica a rmiregistry donde estan las clases
-            System.setProperty("java.rmi.server.codebase", "C:/Users/vitom/Documents/NetBeansProjects/Hipoteca/src/E1"); // Cambie la ruta
-            
+            //System.setProperty("java.rmi.server.codebase", "C:/Users/dniel/Documents/IDEA projects/Remote_Object/src/E1/Servidor"); // Cambie la ruta
+            System.setProperty("java.rmi.server.hostname","192.168.43.225");
+
             InterfaceRemota ir = new ObjetoRemoto();
-            
-            Naming.rebind("//192.168.43.98/ObjetoRemoto", ir);
+
+            Naming.rebind("//192.168.43.225/ObjetoRemoto", ir);
             System.out.println("Servicio iniciado...");
         }
         catch(Exception e){
