@@ -9,7 +9,7 @@ public class Cliente {
     public Cliente(){
         try{
             
-            InterfaceRemota objetoRemoto = (InterfaceRemota)Naming.lookup("//10.30.7.22/ObjetoRemoto");
+            InterfaceRemota objetoRemoto = (InterfaceRemota)Naming.lookup("//192.168.43.198/ObjetoRemoto");
             
             Scanner teclado = new Scanner(System.in);
             System.out.println("Menu de opciones:");
