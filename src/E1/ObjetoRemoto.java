@@ -14,14 +14,19 @@ public class ObjetoRemoto extends UnicastRemoteObject implements InterfaceRemota
     }
 
     @Override
+    public double AreaPoligono(int numeroLados, double longitudLado, double apotema) throws RemoteException {
+        return ((numeroLados * longitudLado) * apotema) / 2;
+    }
+
+    @Override
     public double AreaCirculo(double radio) throws RemoteException {
         return Math.PI * Math.pow(radio, 2);
     }
 
     @Override
     public double[] EcuacionLineal(double a, double b, double c) throws RemoteException {
-        double root = Math.sqrt(Math.pow(b, 2) - 4 * (a * c));
-        double res = root / (2 * a);
+        double raiz = Math.sqrt(Math.pow(b, 2) - 4 * (a * c));
+        double res = raiz / (2 * a);
 
         double resPos = (-b) + res;
         double resNeg = (-b) - res;
