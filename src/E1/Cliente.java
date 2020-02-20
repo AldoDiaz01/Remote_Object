@@ -11,6 +11,8 @@ public class Cliente {
 
             Scanner teclado = new Scanner(System.in);
             try {
+                                String respuesta = "N";
+                                do {
                 System.out.println("Menu de opciones:");
                 System.out.println("1.Calculo del area de un circulo");
                 System.out.println("2.Calculo del area de un poligono");
@@ -18,8 +20,8 @@ public class Cliente {
                 System.out.print("Seleccione una opcion: ");
                 int opcion;
                 opcion = teclado.nextInt();
-                String respuesta = "N";
-                do {
+
+
                     switch (opcion) {
                         case 1:
 
@@ -66,7 +68,7 @@ public class Cliente {
                             System.out.println("Hasta la proximaaaaa...");
                             System.exit(0);
                     }
-                    teclado.next();
+                    teclado.nextLine();
                     System.out.println("¿Desea regresar al menu de opciones? S/N");
                     respuesta = teclado.next();
                 } while (respuesta.equals("S"));
