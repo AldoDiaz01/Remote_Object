@@ -1,7 +1,6 @@
 package E1;
 
-import java.rmi.*;
-import java.text.*;
+import java.rmi.Naming;
 import java.util.Scanner;
 
 public class Cliente {
