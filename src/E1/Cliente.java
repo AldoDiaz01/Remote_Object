@@ -11,20 +11,18 @@ public class Cliente {
 
             Scanner teclado = new Scanner(System.in);
             try {
-                                String respuesta = "N";
-                                do {
-                System.out.println("Menu de opciones:");
-                System.out.println("1.Calculo del area de un circulo");
-                System.out.println("2.Calculo del area de un poligono");
-                System.out.println("3.Calculo de una ecuacion cuadratica");
-                System.out.print("Seleccione una opcion: ");
-                int opcion;
-                opcion = teclado.nextInt();
-
+                String respuesta = "N";
+                do {
+                    System.out.println("Menu de opciones:");
+                    System.out.println("1.Calculo del area de un circulo");
+                    System.out.println("2.Calculo del area de un poligono");
+                    System.out.println("3.Calculo de una ecuacion cuadratica");
+                    System.out.print("Seleccione una opcion: ");
+                    int opcion;
+                    opcion = teclado.nextInt();
 
                     switch (opcion) {
                         case 1:
-
                             System.out.println("Escogio el area de un circulo: ");
                             System.out.println("Ingrese el radio del circulo: ");
                             double radio = teclado.nextDouble();
