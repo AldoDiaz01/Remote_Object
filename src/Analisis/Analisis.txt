@@ -11,3 +11,4 @@ Area Circulo
 
 Ecuación lineal
 	x = (-b +- (Raiz(b^2 -4aC)))/2a
+ax2 + bx +c

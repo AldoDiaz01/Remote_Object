@@ -1,15 +1,46 @@
 Pruebas Necesarias
 
+Circulo
+
+	Radio Resultado
+	9	254.4690
+
+	Radio Resultado
+	17.5	962.11127
+
+	Radio Resultado
+	0.25	0.1963
+
+	Radio Resultado
+	10.33	335.2366
+
+
 Poligono Regular
 
-Lados	Longitud Apotema
-5	10.5	 4.2
+	Lados	Longitud Apotema Resultado
+	5	10.5	 4.2	  110.25
 
-Lados	Longitud Apotema
-6	6.7	 1.1
+	Lados	Longitud Apotema Resultado
+	6	6.7	 1.1	  22.11
 
-Lados	Longitud Apotema
-7	14	 3.2
+	Lados	Longitud Apotema Resultado
+	7	14	 3.2	   156.8
 
-Lados	Longitud Apotema
-8	14	 3.5
+	Lados	Longitud Apotema Resultado
+	8	14	 3.5	   196
+
+
+
+Ecucación
+
+	a	b	c   Resultado
+	15	2	21
+
+	a	b	c   Resultado	
+	4	120	69
+
+	a	b	c   Resultado
+	55	2.1	1.5
+
+	a	b	c   Resultado
+	1.1 	7.5	5
