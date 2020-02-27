@@ -6,14 +6,14 @@ import java.util.Scanner;
 public class Cliente {
 
     public Cliente() {
+        String respuesta = "N";
         try {
             InterfaceRemota objetoRemoto = (InterfaceRemota) Naming.lookup("//192.168.43.198/ObjetoRemoto");
 
             Scanner teclado = new Scanner(System.in);
-            String respuesta = "N";
+            
             do {
                 try {
-
                     System.out.println("Menu de opciones:");
                     System.out.println("1.Calculo del area de un circulo");
                     System.out.println("2.Calculo del area de un poligono");
@@ -57,14 +57,13 @@ public class Cliente {
                                 System.out.println("Error  matematico. No es posible realizarlo, dado que saca una raiz negativa.");
                             } else {
                                 for (int i = 0; i < tam; i++) {
-                                    System.out.println(arreglo[i]);
+                                    System.out.println(i + " = " + arreglo[i]);
                                 }
                             }
-
                             break;
 
                         default:
-                            System.out.println("Hasta la proximaaaaa...");
+                            System.out.println("Cerrando...");
                             System.exit(0);
                     }
                     teclado.nextLine();
@@ -78,6 +77,7 @@ public class Cliente {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
     public static void main(String[] args) {
