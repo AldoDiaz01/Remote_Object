@@ -10,9 +10,10 @@ public class Cliente {
             InterfaceRemota objetoRemoto = (InterfaceRemota) Naming.lookup("//192.168.43.198/ObjetoRemoto");
 
             Scanner teclado = new Scanner(System.in);
-            try {
-                String respuesta = "N";
-                do {
+            String respuesta = "N";
+            do {
+                try {
+
                     System.out.println("Menu de opciones:");
                     System.out.println("1.Calculo del area de un circulo");
                     System.out.println("2.Calculo del area de un poligono");
@@ -53,7 +54,7 @@ public class Cliente {
                             double[] arreglo;
                             arreglo = objetoRemoto.EcuacionLineal(a, b, c);
                             if (arreglo.length == 0) {
-                                System.out.println("Estas bien wey, eso no se puede...");
+                                System.out.println("Error  matematico. No es posible realizarlo, dado que saca una raiz negativa.");
                             } else {
                                 for (int i = 0; i < tam; i++) {
                                     System.out.println(arreglo[i]);
@@ -69,10 +70,11 @@ public class Cliente {
                     teclado.nextLine();
                     System.out.println("¿Desea regresar al menu de opciones? S/N");
                     respuesta = teclado.next();
-                } while (respuesta.equals("S"));
-            } catch (Exception e) {
-                System.out.println("Dato invalido, por favor ingrese un numero");
-            }
+
+                } catch (Exception e) {
+                    System.out.println("Dato invalido, por favor ingrese un numero");
+                }
+            } while (respuesta.equals("S") || respuesta.equals("s"));
         } catch (Exception e) {
             e.printStackTrace();
         }
