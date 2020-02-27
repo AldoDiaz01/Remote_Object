@@ -33,14 +33,14 @@ Poligono Regular
 
 Ecucación
 
-	a	b	c   Resultado
-	15	2	21
+	a	b	c   Resultados
+	15	2	21	X1 Error 	X2 Error	Ecuacion1 Error		Ecuacion2 Error
 
-	a	b	c   Resultado	
-	4	120	69
+	a	b	c   Resultados	
+	4	120	69	X1 -0.5864 	X2 -29.4135	Ecuacion1 0.0074	Ecuacion2 -0.0041
 
-	a	b	c   Resultado
-	55	2.1	1.5
+	a	b	c   Resultados
+	55	2.1	1.5	X1 Error 	X2 Error	Ecuacion1 Error		Ecuacion2 Error
 
-	a	b	c   Resultado
-	1.1 	7.5	5
+	a	b	c   Resultados
+	1.1 	7.5	5	X1 -0.7489 	X2 -6.0692	Ecuacion1 0.0002	Ecuacion2 -0.0003
