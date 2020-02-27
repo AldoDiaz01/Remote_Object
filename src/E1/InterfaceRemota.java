@@ -38,7 +38,7 @@ public interface InterfaceRemota extends Remote {
      * @param a - Valor de a en formato decimal.
      * @param b - Valor de b en formato decimal.
      * @param c - Valor de c en formato decimal.
-     * @return Un arreglo de decimales con la primera posicion siendo el valor positivo y segundo el resultado del valor negativo.
+     * @return Un arreglo de decimales con la sigiente estructura [Valor de X1, Valor de X2, Resultado de la ec. con X1, Resultado de la ec. con X2]
      * @throws RemoteException
      */
     public double[] EcuacionLineal(double a, double b, double c) throws RemoteException;

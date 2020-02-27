@@ -34,7 +34,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements InterfaceRemota
 
         if (resto <= 0) {
             System.out.println("No se pueden ingresar datos menores a 0");
-
+            System.out.println("Todo meco este vato si o no raza? xdxdxdxdxdxdx");
             return new double[]{};
         } else {
             double raiz = Math.sqrt(resto);
@@ -48,7 +48,7 @@ public class ObjetoRemoto extends UnicastRemoteObject implements InterfaceRemota
             double eqPos = (a * Math.pow(resPos, 2)) + (b * resPos) + c;
             double eqNeg = (a * Math.pow(resNeg, 2)) + (b * resNeg) + c;
 
-            return new double[]{eqPos, eqNeg};
+            return new double[]{resPos, resNeg, eqPos, eqNeg};
         }
     }
 }
