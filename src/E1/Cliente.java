@@ -57,7 +57,7 @@ public class Cliente {
                                 System.out.println("Error  matematico. No es posible realizarlo, dado que saca una raiz negativa.");
                             } else {
                                 for (int i = 0; i < tam; i++) {
-                                    System.out.println(i + " = " + arreglo[i]);
+                                    System.out.println("x" + i + " = " + arreglo[i]);
                                 }
                             }
                             break;
