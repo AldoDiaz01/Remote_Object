@@ -6,15 +6,6 @@ import java.rmi.RemoteException;
 public interface InterfaceRemota extends Remote {
 
     /**
-     * Adice area polygoni regularis secundum suum ambitum, et apotema.
-     * @param perimetro - Perimetro del poligono en formato decimal.
-     * @param apotema - Apotema del poligono en formato decimal.
-     * @return Area del poligono en formato decimal.
-     * @throws RemoteException
-     */
-    public double AreaPoligono(double perimetro, double apotema) throws RemoteException;
-
-    /**
      * Calcula el area de un poligono regular con base en su perimetro y su apotema.
      * @param numeroLados - Numero de lados del poligono en formato entero.
      * @param longitudLado - Longitud de uno de los lados en formato decimal.

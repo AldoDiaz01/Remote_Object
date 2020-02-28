@@ -15,24 +15,24 @@ public class Cliente {
             do {
                 try {
                     System.out.println("Menu de opciones:");
-                    System.out.println("1.Calculo del area de un circulo");
-                    System.out.println("2.Calculo del area de un poligono");
-                    System.out.println("3.Calculo de una ecuacion cuadratica");
-                    System.out.print("Seleccione una opcion: ");
+                    System.out.println("1.Cálculo del área de un circulo");
+                    System.out.println("2.Cálculo del área de un poligono");
+                    System.out.println("3.Cálculo de una ecuación cuadrática");
+                    System.out.print("Seleccione una opción: ");
                     int opcion;
                     opcion = teclado.nextInt();
 
                     switch (opcion) {
                         case 1:
-                            System.out.println("Escogio el area de un circulo: ");
-                            System.out.println("Ingrese el radio del circulo: ");
+                            System.out.println("Escogió el área de un círculo: ");
+                            System.out.println("Ingrese el radio del círculo: ");
                             double radio = teclado.nextDouble();
                             System.out.println("El resultado es: " + objetoRemoto.AreaCirculo(radio));
                             break;
 
                         case 2:
-                            System.out.println("Escogio el area de un poligono: ");
-                            System.out.println("Ingresa el numero de lados: ");
+                            System.out.println("Escogió el área de un polígono: ");
+                            System.out.println("Ingresa el número de lados: ");
                             int numeroLados = teclado.nextInt();
                             System.out.println("Ingrese la longitud de los lados: ");
                             double perimetro = teclado.nextDouble();
@@ -42,17 +42,17 @@ public class Cliente {
                             break;
 
                         case 3:
-                            System.out.println("Escogio una ecuacion cuadratica: ");
+                            System.out.println("Escogió una ecuación cuadrática: ");
                             System.out.println("Ingrese 'a': ");
                             double a = teclado.nextDouble();
                             System.out.println("Ingrese 'b': ");
                             double b = teclado.nextDouble();
                             System.out.println("Ingrese 'c': ");
                             double c = teclado.nextDouble();
-                            System.out.println("El resultado: ");
                             int tam = objetoRemoto.EcuacionLineal(a, b, c).length;
                             double[] arreglo;
                             arreglo = objetoRemoto.EcuacionLineal(a, b, c);
+                            System.out.println("El resultado es: ");
                             if (arreglo.length == 0) {
                                 System.out.println("Error  matematico. No es posible realizarlo, dado que saca una raiz negativa.");
                             } else {
