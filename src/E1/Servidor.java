@@ -13,11 +13,11 @@ public class Servidor {
         try {
             //Se indica a rmiregistry donde estan las clases
             //System.setProperty("java.rmi.server.codebase", "C:/Users/dniel/Documents/IDEA projects/Remote_Object/src/E1/Servidor"); // Cambie la ruta
-            System.setProperty("java.rmi.server.hostname","192.168.43.198");
+            System.setProperty("java.rmi.server.hostname","10.30.7.18");
 
             InterfaceRemota ir = new ObjetoRemoto();
 
-            Naming.rebind("//192.168.43.198/ObjetoRemoto", ir);
+            Naming.rebind("//10.30.7.18/ObjetoRemoto", ir);
             System.out.println("Servidor iniciado...");
         }
         catch(Exception e){

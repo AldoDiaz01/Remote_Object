@@ -11,9 +11,11 @@ public class Cliente {
 
     public Cliente() throws RemoteException, MalformedURLException, NotBoundException {
         String respuesta = "S";
+        
         while (respuesta.equals("S") || respuesta.equals("s")) {
+            
             try {
-                InterfaceRemota objetoRemoto = (InterfaceRemota) Naming.lookup("//192.168.43.198/ObjetoRemoto");
+                InterfaceRemota objetoRemoto = (InterfaceRemota) Naming.lookup("//10.30.7.18/ObjetoRemoto");
 
                 Scanner teclado = new Scanner(System.in);
 
@@ -22,7 +24,7 @@ public class Cliente {
                     System.out.println("Menu de opciones:");
                     System.out.println("1.Calculo del area de un circulo");
                     System.out.println("2.Calculo del area de un poligono");
-                    System.out.println("3.Calculo de una ecuacian cuadratica");
+                    System.out.println("3.Calculo de una ecuacion cuadratica");
                     System.out.println("4.Salir");
                     System.out.print("Seleccione una opcion: ");
                     int opcion;
@@ -67,20 +69,21 @@ public class Cliente {
                                 }
                             }
                             break;
-
-                        default:
+                        case 4:
                             System.out.println("Cerrando...");
                             System.exit(0);
+                        default:
+                            System.out.println("Opcion invalida, regresando al menu");
+                            break;
                     }
                     teclado.nextLine();
-                    System.out.println("¿Desea regresar al menu de opciones? S/N");
+                    System.out.println("¿Desea regresar al menu de opciones? S/s = Regresar al menu // Otro = Salir");
                     respuesta = teclado.next();
                 } catch (RemoteException e) {
                     System.out.println("Error... Regresando al menu");
                 }
             } catch (InputMismatchException d) {
                 System.out.println("Dato invalido, por favor ingrese un numero... Regresando al menu");
-
             }
         }
     }
