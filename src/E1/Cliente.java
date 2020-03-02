@@ -1,38 +1,44 @@
 package E1;
 
+import java.net.MalformedURLException;
 import java.rmi.Naming;
+import java.rmi.NotBoundException;
+import java.rmi.RemoteException;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Cliente {
 
-    public Cliente() {
-        String respuesta = "N";
-        try {
-            InterfaceRemota objetoRemoto = (InterfaceRemota) Naming.lookup("//192.168.43.198/ObjetoRemoto");
+    public Cliente() throws RemoteException, MalformedURLException, NotBoundException {
+        String respuesta = "S";
+        while (respuesta.equals("S") || respuesta.equals("s")) {
+            try {
+                InterfaceRemota objetoRemoto = (InterfaceRemota) Naming.lookup("//192.168.1.71/ObjetoRemoto");
 
-            Scanner teclado = new Scanner(System.in);
-            
-            do {
+                Scanner teclado = new Scanner(System.in);
+
                 try {
+
                     System.out.println("Menu de opciones:");
-                    System.out.println("1.Cálculo del área de un circulo");
-                    System.out.println("2.Cálculo del área de un poligono");
-                    System.out.println("3.Cálculo de una ecuación cuadrática");
-                    System.out.print("Seleccione una opción: ");
+                    System.out.println("1.Calculo del area de un circulo");
+                    System.out.println("2.Calculo del area de un poligono");
+                    System.out.println("3.Calculo de una ecuacian cuadratica");
+                    System.out.println("4.Salir");
+                    System.out.print("Seleccione una opcion: ");
                     int opcion;
                     opcion = teclado.nextInt();
 
                     switch (opcion) {
                         case 1:
-                            System.out.println("Escogió el área de un círculo: ");
-                            System.out.println("Ingrese el radio del círculo: ");
+                            System.out.println("Escogio el area de un circulo... ");
+                            System.out.println("Ingrese el radio del circulo: ");
                             double radio = teclado.nextDouble();
                             System.out.println("El resultado es: " + objetoRemoto.AreaCirculo(radio));
                             break;
 
                         case 2:
-                            System.out.println("Escogió el área de un polígono: ");
-                            System.out.println("Ingresa el número de lados: ");
+                            System.out.println("Escogio el area de un poligono... ");
+                            System.out.println("Ingresa el numero de lados: ");
                             int numeroLados = teclado.nextInt();
                             System.out.println("Ingrese la longitud de los lados: ");
                             double perimetro = teclado.nextDouble();
@@ -42,7 +48,7 @@ public class Cliente {
                             break;
 
                         case 3:
-                            System.out.println("Escogió una ecuación cuadrática: ");
+                            System.out.println("Escogio una ecuacion cuadratica... ");
                             System.out.println("Ingrese 'a': ");
                             double a = teclado.nextDouble();
                             System.out.println("Ingrese 'b': ");
@@ -69,18 +75,17 @@ public class Cliente {
                     teclado.nextLine();
                     System.out.println("¿Desea regresar al menu de opciones? S/N");
                     respuesta = teclado.next();
-
-                } catch (Exception e) {
-                    System.out.println("Dato invalido, por favor ingrese un numero");
+                } catch (RemoteException e) {
+                    System.out.println("Error... Regresando al menu");
                 }
-            } while (respuesta.equals("S") || respuesta.equals("s"));
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+            } catch (InputMismatchException d) {
+                System.out.println("Dato invalido, por favor ingrese un numero... Regresando al menu");
 
+            }
+        }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws RemoteException, MalformedURLException, NotBoundException {
         new Cliente();
     }
 }

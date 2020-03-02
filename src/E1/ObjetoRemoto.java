@@ -11,19 +11,19 @@ public class ObjetoRemoto extends UnicastRemoteObject implements InterfaceRemota
 
     @Override
     public double AreaPoligono(int numeroLados, double longitudLado, double apotema) throws RemoteException {
-        System.out.println("Calculando área de un poligono...");
+        System.out.println("Se calculo el area de un poligono...");
         return ((numeroLados * longitudLado) * apotema) / 2;
     }
 
     @Override
     public double AreaCirculo(double radio) throws RemoteException {
-        System.out.println("Calculando área de un círculo...");
+        System.out.println("Se calculo el area de un circulo...");
         return Math.PI * Math.pow(radio, 2);
     }
 
     @Override
     public double[] EcuacionLineal(double a, double b, double c) throws RemoteException {
-        System.out.println("Calculando ecuacion lineal...");
+        System.out.println("Se calculo una ecuacion lineal...");
         double potencia = Math.pow(b, 2);
         double resto = potencia - (4 * (a * c));
 
