@@ -13,7 +13,7 @@ public class Cliente {
         String respuesta = "S";
         while (respuesta.equals("S") || respuesta.equals("s")) {
             try {
-                InterfaceRemota objetoRemoto = (InterfaceRemota) Naming.lookup("//192.168.1.71/ObjetoRemoto");
+                InterfaceRemota objetoRemoto = (InterfaceRemota) Naming.lookup("//192.168.43.198/ObjetoRemoto");
 
                 Scanner teclado = new Scanner(System.in);
 
